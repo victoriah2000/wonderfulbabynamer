@@ -11,6 +11,7 @@ struct RankPage: View {
     var body: some View {
       VStack {
         Text("Wonderful Baby Namer")
+          .font(Font.custom("HennyPenny-Regular", size: 35))
             .padding()
           .background(Image("rankPage"), alignment: .center )
         
