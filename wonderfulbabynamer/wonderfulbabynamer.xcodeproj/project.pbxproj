@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55C7BC1024E99BE30045E349 /* RankPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7BC0F24E99BE30045E349 /* RankPage.swift */; };
+		55C7BC1224E99C090045E349 /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7BC1124E99C090045E349 /* SearchPage.swift */; };
+		55C7BC1424E9A7850045E349 /* yob2018.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55C7BC1324E9A7850045E349 /* yob2018.txt */; };
 		55DB18FB24E88D9700118EFB /* wonderfulbabynamerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB18FA24E88D9700118EFB /* wonderfulbabynamerApp.swift */; };
 		55DB18FD24E88D9700118EFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB18FC24E88D9700118EFB /* ContentView.swift */; };
 		55DB18FF24E88D9700118EFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55DB18FE24E88D9700118EFB /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55C7BC0F24E99BE30045E349 /* RankPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankPage.swift; sourceTree = "<group>"; };
+		55C7BC1124E99C090045E349 /* SearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage.swift; sourceTree = "<group>"; };
+		55C7BC1324E9A7850045E349 /* yob2018.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = yob2018.txt; sourceTree = "<group>"; };
 		55DB18F724E88D9600118EFB /* wonderfulbabynamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wonderfulbabynamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DB18FA24E88D9700118EFB /* wonderfulbabynamerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wonderfulbabynamerApp.swift; sourceTree = "<group>"; };
 		55DB18FC24E88D9700118EFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,8 +60,11 @@
 			children = (
 				55DB18FA24E88D9700118EFB /* wonderfulbabynamerApp.swift */,
 				55DB18FC24E88D9700118EFB /* ContentView.swift */,
+				55C7BC1124E99C090045E349 /* SearchPage.swift */,
+				55C7BC0F24E99BE30045E349 /* RankPage.swift */,
 				55DB18FE24E88D9700118EFB /* Assets.xcassets */,
 				55DB190324E88D9700118EFB /* Info.plist */,
+				55C7BC1324E9A7850045E349 /* yob2018.txt */,
 				55DB190024E88D9700118EFB /* Preview Content */,
 			);
 			path = wonderfulbabynamer;
@@ -128,6 +137,7 @@
 			files = (
 				55DB190224E88D9700118EFB /* Preview Assets.xcassets in Resources */,
 				55DB18FF24E88D9700118EFB /* Assets.xcassets in Resources */,
+				55C7BC1424E9A7850045E349 /* yob2018.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +150,8 @@
 			files = (
 				55DB18FD24E88D9700118EFB /* ContentView.swift in Sources */,
 				55DB18FB24E88D9700118EFB /* wonderfulbabynamerApp.swift in Sources */,
+				55C7BC1224E99C090045E349 /* SearchPage.swift in Sources */,
+				55C7BC1024E99BE30045E349 /* RankPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

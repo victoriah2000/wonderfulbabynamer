@@ -9,10 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
+      VStack {
+        Text("Wonderful Baby Namer")
             .padding()
+          .font(Font.custom ("Henny Penny", size: 20))
+          .background(Image("homePage"), alignment: .center)
+      }
+
+       // Text("Hello, world!")
+          //  .padding()
+    
     }
+  
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
