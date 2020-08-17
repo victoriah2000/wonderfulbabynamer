@@ -128,3 +128,4 @@ final class BabyNameModel: ObservableObject {
     return result
   }
 }
+

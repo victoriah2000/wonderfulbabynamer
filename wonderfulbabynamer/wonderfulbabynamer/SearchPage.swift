@@ -25,47 +25,44 @@ struct SearchPage: View {
             .background(Color(.systemBackground))
             .border(Color.gray)
             .padding(EdgeInsets(top: 60, leading: 10, bottom: 10, trailing: 10))
+
           ZStack {
-            Image("green_banner").resizable().frame(width: 400, height: 230
-            )
-            VStack {
-              
-              Text("Child Parameters...")
-                .font(Font.custom ("HennyPenny-Regular", size: 20))
-                .padding(.top, 20)
-                .padding(.bottom, -10)
-              
+            Image("green_banner").resizable().frame(width: 400, height: 280)
+            VStack(spacing: 0) {
               HStack {
                 Spacer()
                 
                 ZStack {
-                  Image(model.filterGender == .boy ? "boy" : "girl")
-                    .frame(width: 40, height: 40).shadow(radius: 2)
+                  Image(model.filterGender == .boy ? "boy_state" : "girl_state")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 168).shadow(radius: 2)
                   Text(model.filterGender.name).foregroundColor(.black)
-                    .offset(y: model.filterGender == .boy ? 35.0 : 25.0)
-                  
+                    .offset(x: 35, y: -65)
+                    .font(.body)
                 }
-                .padding(30)
                 .onTapGesture {
                   model.filterGender = model.filterGender == .boy ? .girl : .boy
                 }
-                
-                
                 Spacer()
                 
                 ZStack {
-                  Image(model.order == .popularity ? "mixed" : "mixed")
-                    .frame(width: 40, height: 40).shadow(radius: 2)
+                  Image(model.order == .popularity ? "popularity" : "AZee")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 150).shadow(radius: 2)
                   Text(model.order.name).foregroundColor(.black)
-                    .offset(y: model.order == .popularity ? 25.0 : 25.0)
-                  
+                    .offset(x: -25, y: -65)
+                    .font(.body)
                 }
-                .padding(30)
                 .onTapGesture {
                   model.order = model.order == .alpha ? .popularity : .alpha
                 }
                 Spacer()
-              }.padding(.bottom, 30)
+              }
+              Text("Tap To Change")
+                .font(Font.custom ("HennyPenny-Regular", size: 20))
+              Spacer()
             }
           }
                     
