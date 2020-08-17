@@ -94,6 +94,11 @@ final class BabyNameModel: ObservableObject {
     database = try! BabyName.load(fromResource: "yob2018")
   }
 
+  convenience init(favorites: [String]) {
+    self.init()
+    self.favorites = favorites
+  }
+  
   func tapFavorite(name: String) {
     if favorites.contains(name) {
       favorites.removeAll { name == $0 }
@@ -123,79 +128,3 @@ final class BabyNameModel: ObservableObject {
     return result
   }
 }
-
-struct ContentTestView: View {
-
-  @StateObject var model = BabyNameModel()
-
-  var body: some View {
-    TabView {
-      NavigationView {
-        VStack {
-          HStack {
-            TextField("Search...", text: $model.filterString)
-              .textFieldStyle(PlainTextFieldStyle())
-            Picker(selection: $model.order,
-                   label: Text(model.order.name)) {
-              Text(SortOrder.alpha.name).tag(SortOrder.alpha)
-              Text(SortOrder.popularity.name).tag(SortOrder.popularity)
-            }.pickerStyle(MenuPickerStyle())
-
-            Picker(selection: $model.filterGender,
-                   label: Text(model.filterGender.name)) {
-              Text(Gender.boy.name).tag(Gender.boy)
-              Text(Gender.girl.name).tag(Gender.girl)
-            }.pickerStyle(MenuPickerStyle())
-          }.padding()
-          List(model.babyNames) { babyName in
-            HStack {
-              Text(babyName.name.localizedCapitalized)
-              Spacer()
-              Group {
-                if model.favorites.contains(babyName.name) {
-                  Image(systemName: "heart.fill").foregroundColor(.red)
-                }
-                else {
-                  Image(systemName: "heart").foregroundColor(.gray)
-                }
-              }.onTapGesture {
-                withAnimation {
-                  model.tapFavorite(name: babyName.name)
-                }
-              }
-            }
-          }.navigationTitle("Baby Names")
-        }
-      }.tabItem {
-        Image(systemName: "a.book.closed.fill")
-        Text("Names")
-      }
-      NavigationView {
-
-        Group {
-          if (model.favorites.isEmpty) {
-            Text("No favorites yet")
-          }
-          else {
-            List(model.favorites, id: \.self) { name in
-              HStack {
-                Text(name.localizedCapitalized)
-                Spacer()
-                Image(systemName: "heart.fill").foregroundColor(.red).onTapGesture {
-                  withAnimation {
-                    model.tapFavorite(name: name)
-                  }
-                }
-              }
-            }
-          }
-        }.navigationTitle("Favorites")
-      }
-      .tabItem {
-        Image(systemName: "heart.fill")
-        Text("Favorites")
-      }
-    }.accentColor(.orange)
-  }
-}
-
