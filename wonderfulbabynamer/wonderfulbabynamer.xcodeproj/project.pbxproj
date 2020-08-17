@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5551821324EA002500A99525 /* BabyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551821224EA002500A99525 /* BabyModel.swift */; };
 		55C7BC1024E99BE30045E349 /* RankPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7BC0F24E99BE30045E349 /* RankPage.swift */; };
 		55C7BC1224E99C090045E349 /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7BC1124E99C090045E349 /* SearchPage.swift */; };
 		55C7BC1424E9A7850045E349 /* yob2018.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55C7BC1324E9A7850045E349 /* yob2018.txt */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5551821224EA002500A99525 /* BabyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyModel.swift; sourceTree = "<group>"; };
 		55C7BC0F24E99BE30045E349 /* RankPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankPage.swift; sourceTree = "<group>"; };
 		55C7BC1124E99C090045E349 /* SearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage.swift; sourceTree = "<group>"; };
 		55C7BC1324E9A7850045E349 /* yob2018.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = yob2018.txt; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				55DB18FC24E88D9700118EFB /* ContentView.swift */,
 				55C7BC1124E99C090045E349 /* SearchPage.swift */,
 				55C7BC0F24E99BE30045E349 /* RankPage.swift */,
+				5551821224EA002500A99525 /* BabyModel.swift */,
 				55DB18FE24E88D9700118EFB /* Assets.xcassets */,
 				55DB190324E88D9700118EFB /* Info.plist */,
 				55C7BC1324E9A7850045E349 /* yob2018.txt */,
@@ -167,6 +170,7 @@
 				55DB18FD24E88D9700118EFB /* ContentView.swift in Sources */,
 				55DB18FB24E88D9700118EFB /* wonderfulbabynamerApp.swift in Sources */,
 				55C7BC1224E99C090045E349 /* SearchPage.swift in Sources */,
+				5551821324EA002500A99525 /* BabyModel.swift in Sources */,
 				55C7BC1024E99BE30045E349 /* RankPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
